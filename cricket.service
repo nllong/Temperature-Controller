@@ -1,0 +1,14 @@
+[Unit]
+Description=cricket
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python -u run.py
+WorkingDirectory=/home/pi/Projects/cricket_stat
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
